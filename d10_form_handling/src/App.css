@@ -1,0 +1,24 @@
+*{
+  background-color: rgb(89, 88, 88);
+}
+
+.formarea{margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.inparea{
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: aliceblue;
+  border: 5px solid rgb(233, 125, 233);
+  padding-left: 4px;
+}
+.btn_submit{
+  width: 70px;
+  height: 25px;
+  background-color: blue;
+}

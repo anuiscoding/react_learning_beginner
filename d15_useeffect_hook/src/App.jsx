@@ -5,16 +5,16 @@ const App = () => {
   const [num, setnum] = useState(0)
   const [num2, setnum2] = useState(0)
 
-  //This function inside usestate runs on initial react render and every re-render, this is called mounting. not the main use case of useEffect
+  //This function inside usestate runs on **initial react render and every re-render**, this is called mounting. not the main use case of useEffect
   useEffect(function(){
     console.log("useEffect is running...")
   })
-  //This useeffect's callback function runs only once on initial render, [dependency array]
+  //This useeffect's callback function runs **only once on initial render**, [dependency array]
   useEffect(function(){
     console.log("run once...")
   }, [])
 
-  //if i want this to run a function on num2 state change
+  //if i want this to run a function on initial render and ** num2 state change**
   useEffect(function(){
     console.log("num2 changed...")
   }, [num2])
@@ -22,10 +22,12 @@ const App = () => {
   //application
   const [mouseEnterCount, setmouseEnterCount] = useState(0)
   const [mouseLeaveCount, setmouseLeaveCount] = useState(0)
+
   //mouse enter dependency
   useEffect(function(){
     console.log("mouse pointer has entered...")
   }, [mouseEnterCount])
+
   //mouse leave dependency
   useEffect(function(){
     console.log("mouse pointer has left...")
